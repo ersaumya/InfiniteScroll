@@ -1,0 +1,26 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let list of airlines;let i=index">
+        <a class="list-group-item list-group-item-action" *ngIf="i + 1 === airlines.length" #lastList>
+            <img class="rounded float-left" [src]="list.airline.logo" alt="pic"/>
+            <span>
+                <p>
+                    <span>Airline</span>:{{list.airline.name}}
+                </p>
+                <p>
+                    <span>Name</span>:{{list.name}}
+                </p>
+            </span>
+        </a>
+        <a class="list-group-item list-group-item-action" *ngIf="i + 1 != airlines.length">
+            <img class="rounded float-left" [src]="list.airline.logo" alt="pic" />
+            <span>
+                <p>
+                    <span>Airline</span>:{{list.airline.name}}
+                </p>
+                <p>
+                    <span>Name</span>:{{list.name}}
+                </p>
+            </span>
+        </a>
+    </li>
+</ul>
